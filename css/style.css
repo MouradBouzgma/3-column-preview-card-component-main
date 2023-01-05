@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+  --main-margin: 25px;
+}
+
+body {
+  font-family: 'Big Shoulders Display', cursive;
+  font-family: 'Lexend Deca', sans-serif;
+  background-color: var(--Very-light-gray-background-headings-buttons);
+}
+
+main {
+  margin-top: 15px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .card {
+  display: flex;
+}
+
+@media (max-width:999px) {
+  main .card {
+    width: 345px;
+    flex-direction: column;
+  }
+}
+
+@media (min-width:1000px) {
+  main .card {
+    width: 900px;
+    flex-direction: row;
+  }
+}
+
+main .card .card-info {
+  padding: 40px;
+}
+
+main .card .card-info:first-of-type {
+  background-color: var(--Bright-orange);
+}
+
+main .card .card-info:nth-of-type(2) {
+  background-color: var(--Dark-cyan);
+}
+
+main .card .card-info:last-of-type {
+  background-color: var(--very-dark-cyan);
+}
+
+main .card .card-info h1 {
+  margin-bottom: var(--main-margin);
+  color: var(--Very-light-gray-background-headings-buttons);
+  font-family: 'Big Shoulders Display', cursive;
+}
+
+main .card .card-info p {
+  margin-bottom: var(--main-margin);
+  font-size: 15px;
+  font-family: 'Lexend Deca', sans-serif;
+  color: var(--Transparent-white-paragraphs);
+}
+
+main .card .card-info img {
+  margin: var(--main-margin) 0px;
+}
+
+main .card .card-info button {
+  margin-top: calc(20px + var(--main-margin));
+  background-color: var(--Very-light-gray-background-headings-buttons);
+  padding: 15px;
+  font-family: 'Lexend Deca', sans-serif;
+  border-radius: 30px;
+  border: 2px solid var(--Transparent-white-paragraphs);
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+
+
+main .card .card-info button[b-color="very-Dark-cyan"] {
+  color: var(--very-dark-cyan);
+}
+
+main .card .card-info button[b-color="Dark-cyan"] {
+  color: var(--Dark-cyan);
+}
+
+main .card .card-info button[b-color="Bright-orange"] {
+  color: var(--Bright-orange);
+}
+
+main .card .card-info button[b-color="very-Dark-cyan"]:hover {
+  background-color: var(--very-dark-cyan);
+}
+
+main .card .card-info button[b-color="Dark-cyan"]:hover {
+  background-color: var(--Dark-cyan);
+}
+
+main .card .card-info button[b-color="Bright-orange"]:hover {
+  background-color: var(--Bright-orange);
+}
+
+main .card .card-info button:hover {
+  color: var(--Transparent-white-paragraphs);
+}
